@@ -1,113 +1,130 @@
-import Image from 'next/image'
+import { Hero } from "./_components/Hero/Hero";
+import { Portfolio } from "./_components/Portfolio";
+import { MeetandGreet } from "./_components/MeetandGreet";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="flex-auto pt-16 lg:pt-28">
+      {/* Hero  */}
+      <Hero />
+      {/* Portfolio */}
+      <Portfolio />
+     
+      {/* Meet and Greet */}
+     <MeetandGreet />
+      {/* Be a Part */}
+      <div className="flex justify-center items-center h-screen">
+        <div className="text-center">
+          <p className="text-gray-400 text-sm uppercase tracking-widest mb-2">
+            Be part of
+          </p>
+          <h1 className="text-red-600 text-5xl md:text-8xl font-bold">
+            Indonesia
+          </h1>
+          <h2 className="text-white text-2xl md:text-5xl font-bold uppercase">
+            Comic Con
+          </h2>
+          <p className="text-yellow-400 text-6xl md:text-9xl font-bold">2023</p>
         </div>
       </div>
+      <div className="container mx-auto p-8">
+        <div className="flex justify-between items-start">
+          {/* <!-- Left Section --> */}
+          <div className="w-full md:w-1/2 p-4 space-y-6">
+            <div className="text-red-600 uppercase text-sm font-bold tracking-widest">
+              Tenant Application
+            </div>
+            <h1 className="text-5xl font-bold">SHOWCASE YOUR BRAND</h1>
+            <p className="text-gray-400">
+              Be part of something big by becoming a tenant at Indonesia Comic
+              Con, one of the largest pop culture event in Indonesia.
+            </p>
+            <div className="border-t border-green-500 pt-2">
+              <p className="text-gray-400">100% space has been occupied.</p>
+            </div>
+            <button className="bg-green-500 text-white font-bold py-2 px-4 rounded">
+              Book your space
+            </button>
+          </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+          {/* <!-- Right Section --> */}
+          <div className="w-full md:w-1/2 p-4 space-y-8">
+            {/* <!-- Application Categories --> */}
+            <div className="space-y-4">
+              <div className="flex justify-between items-center border border-red-600 p-4 rounded-lg">
+                <div className="space-y-2">
+                  <h2 className="text-xl font-bold">
+                    Championship of Cosplay Application
+                  </h2>
+                  <p className="text-gray-400 text-sm">
+                    Unleash your inner hero at Indonesia Comic Con&apos;s
+                    cosplay competition! Join the fun and win big.
+                  </p>
+                </div>
+                <button className="bg-white text-black font-bold py-2 px-4 rounded-full">
+                  Apply
+                </button>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="flex justify-between items-center border border-red-600 p-4 rounded-lg">
+                <div className="space-y-2">
+                  <h2 className="text-xl font-bold">
+                    Artist Alley Application
+                  </h2>
+                  <p className="text-gray-400 text-sm">
+                    Are you an artist or a creator? Showcase and sell your
+                    artwork, crafts, and other merchandise directly to ICC’s
+                    attendees.
+                  </p>
+                </div>
+                <button className="bg-white text-black font-bold py-2 px-4 rounded-full">
+                  Apply
+                </button>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="flex justify-between items-center border border-red-600 p-6 rounded-lg">
+                <div className="space-y-2">
+                  <h2 className="text-xl font-bold">
+                    Community Booth Application
+                  </h2>
+                  <p className="text-gray-400 text-sm">
+                    Get a limited free booth for pop culture-related
+                    communities.
+                  </p>
+                </div>
+                <button className="bg-white text-black font-bold py-2 px-4 rounded-full">
+                  Apply
+                </button>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="flex justify-between items-center border border-red-600 p-4 rounded-lg">
+                <div className="space-y-2">
+                  <h2 className="text-xl font-bold">
+                    Media Partner Application
+                  </h2>
+                  <p className="text-gray-400 text-sm">
+                    Become an official Indonesia Comic Con’s media partner.
+                  </p>
+                </div>
+                <button className="bg-white text-black font-bold py-2 px-4 rounded-full">
+                  Apply
+                </button>
+              </div>
+            </div>
+            <div className="text-gray-400 text-sm">
+              Do you have any ideas on how we can work together to build a
+              better Indonesia Comic Con? Please share your thoughts and
+              suggestions.
+              <a href="#" className="text-green-500 font-bold">
+                Contact us
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }
